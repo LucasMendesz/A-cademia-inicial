@@ -10,15 +10,40 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
     <!-- CSS Próprio -->
     <link  href="estilo.css" rel="stylesheet">
 
 </head>
-<body>
+<body id="topo">
     
     <!-- HEADER BOOTSTRAP -->
-    <nav class="navbar navbar-expand-md bg-light shadow">
+    <header class="container pt-3 ">
+
+      <div class="row">
+
+        <div class="col">
+          <p>Aberta todos os dias - 24hs</p>
+        </div>
+
+        <div class="col text-end ">
+          <p class="h4 ">
+            <a href="" class="text-sucess me-4"><i class="bi bi-whatsapp"></i></a>
+            <a href="" class="text-danger me-4"><i class="bi bi-instagram"></i></a>
+            <a href="" class="text-primary me-4"><i class="bi bi-facebook"></i></a>
+            <a href="" class="text-info"><i class="bi bi-linkedin"></i></a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+    <!-- NAV BOOTSTRAP -->
+    <nav class="navbar navbar-expand-md bg-light shadow sticky-top">
 
         <div class="container">
             
@@ -128,7 +153,7 @@
 
 
     <!-- Custom cards -->
-    <section class="container px-4 py-5" id="custom-cards">
+    <section class="container px-4 py-5" id="modalidades">
         <h2 class="pb-2 border-bottom">O que você prefere?</h2>
     
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
@@ -156,7 +181,7 @@
           <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-4 shadow-lg" style="background-image: url('img/musculacao-b.jpg'); background-size: cover;">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold  ">Musculação</h2>
+                <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold  ">Musculação</h2>
                 <p>A base de tudo! Fortaleça seu corpo para superar qualquer desafio.</p>
                 <p><a href="#" title="" class="btn btn-primary btn w-100">Quero começar!</a></p>
               </div>
@@ -164,6 +189,30 @@
           </div>
         </div>
 
+    </section>
+
+
+    <!-- Vídeo background -->
+
+    <section id="videoback">
+
+      <!-- Fundo preto -->
+      <div class="overlay"></div>
+    
+      <!-- The HTML5 video element that will create the background video on the header -->
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="videos/video-2.mp4" type="video/mp4">
+      </video>
+    
+      <!-- The header content -->
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-3">COMECE AGORA!</h1>
+            <p class="lead mb-0">Na A-Cademia você vai encontrar suporte para escolher a atividade ideal para você.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
 
@@ -181,9 +230,18 @@
       </section>
 
 
+      <!-- MAPA GOOGLE -->
+
+      <section class="container-fluid m-0 p-0">
+           
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29276.36311114372!2d-46.88371138447213!3d-23.476857422382178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03aaf6d062af%3A0x2c22de58cd7f17f1!2sAlphaville%2C%20Santana%20de%20Parna%C3%ADba%20-%20SP%2C%2006542-115!5e0!3m2!1spt-BR!2sbr!4v1653573462239!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </section>
+
+
       <!-- Formulário -->
 
-      <section class="container mt-5 pt-5">
+      <section id="contato" class="container mt-5 pt-5">
           <div class="row">
               <div class="col-10 offset-1">
                   <h2 class="pb-2 border-bottom">Entre em contato</h2>
@@ -195,17 +253,26 @@
 
             <div class="col-md-4">
               <label for="inputEmail4" class="form-label">Nome</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <div class="input-group">
+                <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                <input type="text" class="form-control" id="autoSizingInputGroup">
+              </div>
             </div>
 
             <div class="col-md-4">
               <label for="inputPassword4" class="form-label">E-mail</label>
-              <input type="password" class="form-control" id="inputPassword4">
+                <div class="input-group">
+                <div class="input-group-text"><i class="bi bi-envelope-fill"></i></div>
+                <input type="text" class="form-control" id="autoSizingInputGroup">
+              </div>
             </div>
 
             <div class="col-4">
               <label for="inputAddress" class="form-label">Fone</label>
-              <input type="tel" class="form-control" id="inputAddress" placeholder="DDD + Fone">
+              <div class="input-group">
+                <div class="input-group-text"><i class="bi bi-telephone-fill"></i></div>
+                <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="DDD + Fone">
+              </div>
             </div>
 
             <div class="col-12">
@@ -219,6 +286,74 @@
             </div>
           </form>
       </section>
+
+
+      <!-- FOOTER -->
+      <section class="container-fluid  mt-5">
+
+        <footer class="py-5">
+
+          <div class="row">
+
+            <div class="col-8 offset-2 col-md-5 offset-md-1 mb-3 text-center">
+              <h2>A-Cademia</h2>
+              <p class="small">A melhor rede de academia do Brasil.</p>
+              <p>Telefone: 11 2345-6789 <br>WhatsApp: 11 2345-6789 <br>Endereço: Av. Paulista, 500 <br> São Paulo - SP.</p>
+             </div>
+
+
+
+            <div class="col-4 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-4 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-4 col-md-2 mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+              </ul>
+            </div>
+      
+         
+
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+            </ul>
+          </div>
+
+        </footer>
+
+      </section>
+      
+      
 
       
 
